@@ -272,9 +272,11 @@
 
         <div x-show="openBar" class="w-auto h-screen p-5 left-0 fixed border-2 overflow-x-hidden"
             :class="{ 'hidden p-0 w-0' : openBar === false }" :class="{ 'block w-auto' : openBar === true }"
-            x-transition:enter="transition-all ease-out duration-5000" x-transition:enter-start="h-0"
-            x-transition:enter-end="h-full" x-transition:leave="transition ease-out duration-5000"
-            x-transition:leave-start="h-full" x-transition:leave-end="h-0" style="background-color: #f4f5f7;">
+            x-transition:enter="transition transform ease-in duration-100 lg:duration-300 origin-left"
+            x-transition:enter-start="w-0 scale-x-0" x-transition:enter-end="w-auto scale-x-100"
+            x-transition:leave="transition transform ease-in duration-100 lg:duration-300 origin-left"
+            x-transition:leave-start="w-auto scale-x-100" x-transition:leave-end="w-0 scale-x-0"
+            style="background-color: #f4f5f7;">
 
             <div class="flex flex-col w-auto mt-16">
                 <div class="absolute right-0 -mt-5"><button class="p-2 bg-gray-300" @click="openBar = !openBar">
@@ -540,8 +542,9 @@
             </button>
         </div>
 
-        <div id="mainContent" class="h-screen absolute w-10/12 pt-10 lg:pl-16 pl-10 right-0 mt-16"
-            :class="{ 'w-full' : openBar === false }" style="z-index: -1;">
+        <div id="mainContent" class="h-screen right-0 absolute pt-10 lg:pl-16 pl-10 mt-16"
+            :class="{ 'w-full' : openBar === false,
+                        'w-screen md:w-10/12 transition-all transform ease-out duration-500 origin-right' : openBar === true }" style="z-index: -1;">
             <header class="bg-white shadow">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     <h1 class="text-3xl font-bold leading-tight text-gray-900">
@@ -551,11 +554,11 @@
             </header>
             <main>
                 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-                    
+
                     <div class="px-4 py-6 sm:px-0">
                         <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
                     </div>
-                    
+
                 </div>
             </main>
         </div>
