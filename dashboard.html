@@ -7,13 +7,22 @@
     <title>Tailwind-Alpine JS</title>
     <link rel="stylesheet" href="./css/tailwind.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        button:focus,
+        ul:focus {
+            outline: none;
+        }
 
+        button:hover {
+            color: #667eea;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="">
-        <div id="main" class="flex border-b-2 shadow h-16">
-            <div class="flex  items-center px-4 w-2/3" id="brandAndOptions">
+    <nav class="fixed w-full z-50 top-0 bg-white">
+        <div id="main" class="hidden lg:flex border-b-2 border-gray-300 shadow h-16">
+            <div class="flex items-center px-4 w-2/3" id="brandAndOptions">
                 <div id="brands" class="flex  items-center">
                     <a href="#">
                         <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation">
@@ -22,7 +31,7 @@
                             </path>
 
                         </svg></a>
-                    <div class="flex  items-center" id="brandLogo">
+                    <div class="flex items-center" id="brandLogo">
                         <div id="logo" class="w-6 mx-1">
                             <img class="bg-black" src="./img/cnc-logo.png" alt="">
                         </div>
@@ -47,7 +56,10 @@
                                     </svg>
                                 </div>
                             </button></div>
-                        <div x-show="isOpen" class="absolute max-w-sm rounded bg-white shadow-lg">
+                        <div x-show="isOpen" class="z-50 absolute max-w-sm rounded bg-white shadow-lg"
+                            x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0"
+                            x-transition:enter-end="opacity-100" x-transition:leave="transition ease-out duration-200"
+                            x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
                             <img class="w-full rounded" src="https://tailwindcss.com/img/card-top.jpg"
                                 alt="Sunset in the mountains">
                             <div class="px-6 py-4">
@@ -96,9 +108,11 @@
                                         fill="currentColor" fill-rule="evenodd"></path>
                                 </svg>
                             </div>
-                        </button></div>
+                        </button>
+                    </div>
                     <div class="text-sm items-center py-1"><button
-                            class="px-3 py-1 text-white font-semibold bg-indigo-500 rounded h-8">Create</button></div>
+                            class="px-3 py-1 text-white font-semibold bg-indigo-500 rounded h-8">Create</button>
+                    </div>
                 </div>
             </div>
             <div id="SearchAndOptions" class="flex  w-auto items-center justify-end px-3 w-1/3">
@@ -114,14 +128,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="mx-4"><button id="notification">
+                <div class="mx-2"><button id="notification">
                         <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation">
                             <path
                                 d="M6.485 17.669a2 2 0 0 0 2.829 0l-2.829-2.83a2 2 0 0 0 0 2.83zm4.897-12.191l-.725.725c-.782.782-2.21 1.813-3.206 2.311l-3.017 1.509c-.495.248-.584.774-.187 1.171l8.556 8.556c.398.396.922.313 1.171-.188l1.51-3.016c.494-.988 1.526-2.42 2.311-3.206l.725-.726a5.048 5.048 0 0 0 .64-6.356 1.01 1.01 0 1 0-1.354-1.494c-.023.025-.046.049-.066.075a5.043 5.043 0 0 0-2.788-.84 5.036 5.036 0 0 0-3.57 1.478z"
                                 fill="currentColor" fill-rule="evenodd"></path>
                         </svg>
-                    </button></div>
-                <div class="mx-4" style="fill: white;">
+                    </button>
+                </div>
+                <div class="mx-2" style="fill: white;">
                     <button id="Help">
                         <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation">
                             <g fill-rule="evenodd">
@@ -133,33 +148,142 @@
                             </g>
                         </svg>
                     </button>
-                </div class="mx-4">
-                <div><button id="Settings">
+                </div>
+                <div class="mx-2"><button id="Settings">
                         <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation">
                             <path
                                 d="M11.701 16.7a5.002 5.002 0 1 1 0-10.003 5.002 5.002 0 0 1 0 10.004m8.368-3.117a1.995 1.995 0 0 1-1.346-1.885c0-.876.563-1.613 1.345-1.885a.48.48 0 0 0 .315-.574 8.947 8.947 0 0 0-.836-1.993.477.477 0 0 0-.598-.195 2.04 2.04 0 0 1-1.29.08 1.988 1.988 0 0 1-1.404-1.395 2.04 2.04 0 0 1 .076-1.297.478.478 0 0 0-.196-.597 8.98 8.98 0 0 0-1.975-.826.479.479 0 0 0-.574.314 1.995 1.995 0 0 1-1.885 1.346 1.994 1.994 0 0 1-1.884-1.345.482.482 0 0 0-.575-.315c-.708.2-1.379.485-2.004.842a.47.47 0 0 0-.198.582A2.002 2.002 0 0 1 4.445 7.06a.478.478 0 0 0-.595.196 8.946 8.946 0 0 0-.833 1.994.48.48 0 0 0 .308.572 1.995 1.995 0 0 1 1.323 1.877c0 .867-.552 1.599-1.324 1.877a.479.479 0 0 0-.308.57 8.99 8.99 0 0 0 .723 1.79.477.477 0 0 0 .624.194c.595-.273 1.343-.264 2.104.238.117.077.225.185.302.3.527.8.512 1.58.198 2.188a.473.473 0 0 0 .168.628 8.946 8.946 0 0 0 2.11.897.474.474 0 0 0 .57-.313 1.995 1.995 0 0 1 1.886-1.353c.878 0 1.618.567 1.887 1.353a.475.475 0 0 0 .57.313 8.964 8.964 0 0 0 2.084-.883.473.473 0 0 0 .167-.631c-.318-.608-.337-1.393.191-2.195.077-.116.185-.225.302-.302.772-.511 1.527-.513 2.125-.23a.477.477 0 0 0 .628-.19 8.925 8.925 0 0 0 .728-1.793.478.478 0 0 0-.314-.573"
                                 fill="currentColor" fill-rule="evenodd"></path>
                         </svg>
-                    </button></div>
-                <div class="mx-4"><button id="Profile">
+                    </button>
+                </div>
+                <div class="mx-2"><button id="Profile">
                         <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation">
                             <path
                                 d="M11.701 16.7a5.002 5.002 0 1 1 0-10.003 5.002 5.002 0 0 1 0 10.004m8.368-3.117a1.995 1.995 0 0 1-1.346-1.885c0-.876.563-1.613 1.345-1.885a.48.48 0 0 0 .315-.574 8.947 8.947 0 0 0-.836-1.993.477.477 0 0 0-.598-.195 2.04 2.04 0 0 1-1.29.08 1.988 1.988 0 0 1-1.404-1.395 2.04 2.04 0 0 1 .076-1.297.478.478 0 0 0-.196-.597 8.98 8.98 0 0 0-1.975-.826.479.479 0 0 0-.574.314 1.995 1.995 0 0 1-1.885 1.346 1.994 1.994 0 0 1-1.884-1.345.482.482 0 0 0-.575-.315c-.708.2-1.379.485-2.004.842a.47.47 0 0 0-.198.582A2.002 2.002 0 0 1 4.445 7.06a.478.478 0 0 0-.595.196 8.946 8.946 0 0 0-.833 1.994.48.48 0 0 0 .308.572 1.995 1.995 0 0 1 1.323 1.877c0 .867-.552 1.599-1.324 1.877a.479.479 0 0 0-.308.57 8.99 8.99 0 0 0 .723 1.79.477.477 0 0 0 .624.194c.595-.273 1.343-.264 2.104.238.117.077.225.185.302.3.527.8.512 1.58.198 2.188a.473.473 0 0 0 .168.628 8.946 8.946 0 0 0 2.11.897.474.474 0 0 0 .57-.313 1.995 1.995 0 0 1 1.886-1.353c.878 0 1.618.567 1.887 1.353a.475.475 0 0 0 .57.313 8.964 8.964 0 0 0 2.084-.883.473.473 0 0 0 .167-.631c-.318-.608-.337-1.393.191-2.195.077-.116.185-.225.302-.302.772-.511 1.527-.513 2.125-.23a.477.477 0 0 0 .628-.19 8.925 8.925 0 0 0 .728-1.793.478.478 0 0 0-.314-.573"
                                 fill="currentColor" fill-rule="evenodd"></path>
                         </svg>
-                    </button></div>
+                    </button>
+                </div>
             </div>
+        </div>
 
+        <!-- Responsive Navbar -->
+
+        <div class="flex lg:hidden flex-col bg-white justify-center border shadow z-50" x-data="{ open : false }"
+            :class="{ 'h-16' : open === false }">
+            <div id="barnding" class="relative flex items-center ml-6">
+                <div id="logo" class="bg-black my-2 mx-1">
+                    <img src="./img/cnc-logo.png" class="w-12" alt="">
+                </div>
+                <div class="text-lg">
+                    Code & Colors
+                </div>
+                <div id="toggleBtn" class="absolute right-0 px-6">
+                    <button class="bg-indigo-200 rounded p-1 hover:text-black" @click="open = !open">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="options" class="flex flex-col ml-8 py-4" x-show="open">
+                <div class=" p-2 text-sm"><button>
+                        Your work
+                    </button></div>
+                <div x-data="{ isOpen : false }">
+                    <div class=" p-2 text-sm"><button @click="{ isOpen = !isOpen }" @click.away="isOpen = false"
+                            class="hover:bg-blue-100 hover:rounded hover:text-indigo-500 focus:outline-none"
+                            :class="{ 'bg-blue-100 rounded text-indigo-500' : isOpen === true }">
+                            <div class="flex" class="font-bold">Projects
+                                <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation">
+                                    <path
+                                        d="M8.292 10.293a1.009 1.009 0 0 0 0 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955a1.01 1.01 0 0 0 0-1.419.987.987 0 0 0-1.406 0l-2.298 2.317-2.307-2.327a.99.99 0 0 0-1.406 0z"
+                                        fill="currentColor" fill-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </button></div>
+                    <div x-show="isOpen" class="z-50 absolute max-w-sm rounded bg-white shadow-lg">
+                        <img class="w-full rounded" src="https://tailwindcss.com/img/card-top.jpg"
+                            alt="Sunset in the mountains">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+                            <p class="text-gray-700 text-base">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                Maiores et perferendis eaque, exercitationem praesentium nihil.
+                            </p>
+                        </div>
+                        <div class="px-6 py-4">
+                            <span
+                                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
+                            <span
+                                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
+                            <span
+                                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
+                        </div>
+                    </div>
+                </div>
+                <div class=" p-2 text-sm"><button>
+                        <div class="flex ">Filters
+                            <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation">
+                                <path
+                                    d="M8.292 10.293a1.009 1.009 0 0 0 0 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955a1.01 1.01 0 0 0 0-1.419.987.987 0 0 0-1.406 0l-2.298 2.317-2.307-2.327a.99.99 0 0 0-1.406 0z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </button></div>
+                <div class=" p-2 text-sm"><button>
+                        <div class="flex ">Dashboards
+                            <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation">
+                                <path
+                                    d="M8.292 10.293a1.009 1.009 0 0 0 0 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955a1.01 1.01 0 0 0 0-1.419.987.987 0 0 0-1.406 0l-2.298 2.317-2.307-2.327a.99.99 0 0 0-1.406 0z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </button></div>
+                <div class=" p-2 text-sm"><button>
+                        People
+                    </button></div>
+                <div class=" p-2 text-sm"><button>
+                        <div class="flex ">Apps
+                            <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation">
+                                <path
+                                    d="M8.292 10.293a1.009 1.009 0 0 0 0 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955a1.01 1.01 0 0 0 0-1.419.987.987 0 0 0-1.406 0l-2.298 2.317-2.307-2.327a.99.99 0 0 0-1.406 0z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+                <div class="text-sm items-center py-1"><button
+                        class="px-3 py-1 text-white font-semibold bg-indigo-500 rounded h-8">Create</button>
+                </div>
+
+            </div>
         </div>
     </nav>
     <!-- Header End -->
+
     <!-- SideBar -->
-    <div id="nainBody" class="flex" x-data="{ openBar : true }">
+    <div id="mainBody" class="relative flex" x-data="{ openBar : false}">
 
-        <div x-show="openBar" class="w-auto h-screen p-5 left-0" :class="{ 'hidden p-0 w-0' : openBar === false }"
-            :class="{ 'block w-auto' : openBar === true }" style="background-color: #f4f5f7;">
+        <div x-show="openBar" class="w-auto h-screen p-5 left-0 fixed border-2 overflow-x-hidden"
+            :class="{ 'hidden p-0 w-0' : openBar === false }" :class="{ 'block w-auto' : openBar === true }"
+            x-transition:enter="transition-all ease-out duration-5000" x-transition:enter-start="h-0"
+            x-transition:enter-end="h-full" x-transition:leave="transition ease-out duration-5000"
+            x-transition:leave-start="h-full" x-transition:leave-end="h-0" style="background-color: #f4f5f7;">
 
-            <div class="flex flex-col w-auto">
+            <div class="flex flex-col w-auto mt-16">
+                <div class="absolute right-0 -mt-5"><button class="p-2 bg-gray-300" @click="openBar = !openBar">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path :class="{'hidden': !open, 'inline-flex': open }" class="inline-flex"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button></div>
                 <div id="part1">
                     <div class="flex w-56 ml-3 items-center">
                         <img class="h-6"
@@ -215,33 +339,38 @@
                                 <div class="text-xs mb-1 items-center mx-auto text-gray-700">
                                     BOARDS IN TAILWIND-VUE
                                 </div>
-                                <div class="flex my-2 p-2 border" style="background-color: #f4f5f7;">
-                                    <div class="mr-3">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" focusable="false"
-                                            role="presentation">
-                                            <g fill="currentColor">
-                                                <path
-                                                    d="M3.507 15H16.5c-.007 0-.007-10-.007-10H3.5c.007 0 .007 10 .007 10zM1.5 4.994C1.5 3.893 2.263 3 3.192 3h13.616c.934 0 1.692.895 1.692 1.994v10.012c0 1.101-.763 1.994-1.692 1.994H3.192c-.934 0-1.692-.895-1.692-1.994V4.994zM6.5 5v10h2V5h-2zm5 0v10h2V5h-2z">
-                                                </path>
-                                                <path
-                                                    d="M20.5 5h.006c1.101 0 1.994.895 1.994 1.994v12.012A1.995 1.995 0 0 1 20.506 21H8.494A1.995 1.995 0 0 1 6.5 19.006V19h13c.555 0 1-.448 1-1V5z">
-                                                </path>
-                                            </g>
-                                        </svg>
+                                <button class="focus:outline-none">
+                                    <div class="flex my-2 p-2 border text-sm font-semibold"
+                                        style="background-color: #f4f5f7;">
+                                        <div class="mr-3">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" focusable="false"
+                                                role="presentation">
+                                                <g fill="currentColor">
+                                                    <path
+                                                        d="M3.507 15H16.5c-.007 0-.007-10-.007-10H3.5c.007 0 .007 10 .007 10zM1.5 4.994C1.5 3.893 2.263 3 3.192 3h13.616c.934 0 1.692.895 1.692 1.994v10.012c0 1.101-.763 1.994-1.692 1.994H3.192c-.934 0-1.692-.895-1.692-1.994V4.994zM6.5 5v10h2V5h-2zm5 0v10h2V5h-2z">
+                                                    </path>
+                                                    <path
+                                                        d="M20.5 5h.006c1.101 0 1.994.895 1.994 1.994v12.012A1.995 1.995 0 0 1 20.506 21H8.494A1.995 1.995 0 0 1 6.5 19.006V19h13c.555 0 1-.448 1-1V5z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        TV Board
                                     </div>
-                                    TV Board
-                                </div>
-                                <div class="flex p-2">
-                                    <div class="mr-3">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" focusable="false"
-                                            role="presentation">
-                                            <path
-                                                d="M13 11V3.993A.997.997 0 0 0 12 3c-.556 0-1 .445-1 .993V11H3.993A.997.997 0 0 0 3 12c0 .557.445 1 .993 1H11v7.007c0 .548.448.993 1 .993.556 0 1-.445 1-.993V13h7.007A.997.997 0 0 0 21 12c0-.556-.445-1-.993-1H13z"
-                                                fill="currentColor" fill-rule="evenodd"></path>
-                                        </svg>
+                                </button>
+                                <button class="focus:outline-none">
+                                    <div class="flex p-2 text-sm font-semibold">
+                                        <div class="mr-3">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" focusable="false"
+                                                role="presentation">
+                                                <path
+                                                    d="M13 11V3.993A.997.997 0 0 0 12 3c-.556 0-1 .445-1 .993V11H3.993A.997.997 0 0 0 3 12c0 .557.445 1 .993 1H11v7.007c0 .548.448.993 1 .993.556 0 1-.445 1-.993V13h7.007A.997.997 0 0 0 21 12c0-.556-.445-1-.993-1H13z"
+                                                    fill="currentColor" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        Create board
                                     </div>
-                                    Create board
-                                </div>
+                                </button>
                             </div>
                         </div>
                         <div><button class="px-3 py-3 hover:bg-gray-300 rounded w-56">
@@ -257,7 +386,6 @@
                                             </g>
                                         </svg>
                                     </div>
-
                                     Kanban Board
                                 </div>
                             </button></div>
@@ -399,13 +527,37 @@
                 </div>
             </div>
         </div>
-        <div id="mainContent" class="h-screen w-full p-10">
-            <p>
-                <a href="#" @click="openBar = !openBar">Open</a>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nisi debitis quos magnam magni
-                aspernatur,
-                vitae exercitationem voluptatem illum, minus aperiam laudantium quo quisquam vero corporis ducimus
-                perferendis eveniet ex, facere veniam sit veritatis quas voluptatum numquam! Quibusdam, autem quod.</p>
+        <div class="mt-16 h-screen fixed ml-3" :class="{ 'block' : openBar === false,'hidden' : openBar === true }">
+            <div style="width: 5px;background-color: #f4f5f7;" class="absolute h-screen">
+            </div>
+            <button class="absolute -ml-2 rounded-full bg-indigo-500 text-white hover:bg-gray-700 hover:text-white"
+                style="top: 15%;" @click="openBar = !openBar">
+                <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation">
+                    <path
+                        d="M10.294 9.698a.988.988 0 0 1 0-1.407 1.01 1.01 0 0 1 1.419 0l2.965 2.94a1.09 1.09 0 0 1 0 1.548l-2.955 2.93a1.01 1.01 0 0 1-1.42 0 .988.988 0 0 1 0-1.407l2.318-2.297-2.327-2.307z"
+                        fill="currentColor" fill-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mainContent" class="h-screen absolute w-10/12 pt-10 lg:pl-16 pl-10 right-0 mt-16"
+            :class="{ 'w-full' : openBar === false }" style="z-index: -1;">
+            <header class="bg-white shadow">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    <h1 class="text-3xl font-bold leading-tight text-gray-900">
+                        Dashboard
+                    </h1>
+                </div>
+            </header>
+            <main>
+                <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+                    
+                    <div class="px-4 py-6 sm:px-0">
+                        <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
+                    </div>
+                    
+                </div>
+            </main>
         </div>
     </div>
     <script src="./js/alpine.js"></script>
