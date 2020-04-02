@@ -1,0 +1,20 @@
+{
+  "name": "tailwind_component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codencolors/tailwind_component.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codencolors/tailwind_component/issues"
+  },
+  "homepage": "https://github.com/codencolors/tailwind_component#readme"
+}
