@@ -1,0 +1,24 @@
+{
+  "name": "tailwind_component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss css/tailwind.css -o public/build/tailwind.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aswal94/tailwind_component.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aswal94/tailwind_component/issues"
+  },
+  "homepage": "https://github.com/aswal94/tailwind_component#readme",
+  "dependencies": {
+    "autoprefixer": "^9.7.5",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.2.0"
+  }
+}
