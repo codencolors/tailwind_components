@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "build": "postcss css/tailwind.css -o public/build/tailwind.css live-server/public"
+=======
+    "build": "postcss css/tailwind.css -o public/build/tailwind.css",
+    "watch": "postcss css/tailwind.css -o public/build/tailwind.css --watch"
+>>>>>>> e522db38ead34cf509059f3733e850717422a002
   },
   "repository": {
     "type": "git",

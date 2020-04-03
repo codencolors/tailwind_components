@@ -4,73 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buttons</title>
-    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="../public/build/tailwind.css">
+    <style>
+      body {
+        
+        background-color: rgb(2, 1, 1);
+      }
+    </style>
 </head>
 <body>
- 
-       <!-- Simple Button -->
-       <h2 class="p-4 text-2xl font-bold text-gray-100 bg-indigo-600 ">Simple Button</h2>
-       <div class="m-4">
-           <button class="px-8 py-2 mt-4 ml-4 font-semibold text-gray-300 bg-indigo-700 border rounded-lg hover:bg-indigo-900">Button</button>
-           <button class="px-8 py-2 mt-4 ml-4 font-semibold text-gray-300 bg-green-700 border rounded-full shadow-2xl hover:bg-green-900 ">Button</button>
-       </div>
-       <!-- Curve Button -->
-       <h2 class="p-4 text-2xl font-bold text-gray-100 bg-indigo-600">Curve Button</h2>
-       <div class="m-4">
-           <button class="px-8 py-2 mt-4 ml-4 font-semibold text-gray-300 bg-indigo-700 border rounded-tl-full rounded-br-full hover:bg-indigo-900">Button</button>
-           <button class="px-8 py-2 mt-4 ml-4 font-semibold text-gray-300 bg-green-700 border rounded-tr-full rounded-bl-full hover:bg-green-900">Button</button>
-       </div>
-       <!--  Buy Now button-->
-       <h2 class="p-4 text-2xl font-bold text-gray-100 bg-gray-800">Buy Button</h2>
-       <div class="p-8 m-4 bg-gray-800">
-           <button class="px-12 py-3 font-light font-semibold text-indigo-100 uppercase duration-200 border-2 rounded-md hover:bg-pink-100 hover:text-gray-900">Buy Now</button>
-           <button class="px-12 py-3 font-light font-semibold text-gray-800 uppercase duration-200 bg-pink-100 border-2 rounded-md hover:bg-gray-800 hover:text-gray-100 ">Buy Now</button>
-       </div>
-       <!-- Animation Button --
-        <h2 class="p-4 text-2xl font-bold text-gray-100 bg-gray-900">Animation button</h2>
-        <div class="p-8 m-4 bg-gray-900">
-            <div class="relative inline-block">
-                <button class="px-12 py-4 font-medium text-gray-100 border-2 rounded-md">Buy Now</button>
-                <span class="absolute top-0 bottom-0 left-0 right-0 bg-pink-600 hover:left-3"></span>
-            </div>
-        </div>-->
-        <!-- 3-D button -->
-        <h2 class="p-4 text-2xl font-bold text-gray-100 bg-gray-800">3-D Button</h2>
-        <div class="m-4">
-        <button class="px-4 py-2 font-bold text-white bg-gray-800 border-b-4 border-r-4 border-gray-900 rounded hover:bg-gray-700 hover:border-gray-800">Button</button>
-        <button class="px-4 py-2 font-bold text-white bg-gray-800 border-b-4 border-l-2 border-r-4 border-gray-900 rounded hover:bg-gray-900 hover:border-gray-800">Button</button>
-        <button class="px-4 py-2 font-bold text-white bg-gray-800 border-t-4 border-r-4 border-gray-900 rounded hover:bg-blue-400 hover:border-blue-500">Button</button>    
-        </div>
-        <!-- Elevated button -->
-        <h2 class="p-4 text-2xl font-bold text-gray-100 bg-gray-800">Elevated button</h2>
-        <div class="p-4 m-4 bg-gray-400">
-        <button class="px-4 py-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded shadow hover:bg-gray-100 hover:text-indigo-500">
-            Button
-          </button>
-          <button class="px-4 py-2 font-bold text-gray-800 bg-white border border-gray-400 rounded shadow shadow-outline hover:bg-gray-100">
-            Button
-          </button>
-        </div>
+  <!-- Simple Button -->
+  <div class="text-center">
+    <h2 class="text-gray-100 p-4 font-bold text-2xl border-orange-800 border-b-2 inline-block  mb-2 box-shadow-blue">Simple Button</h2><br>
+    <button class="focus:outline-none btn bg-blue-700 hover:bg-blue-600">Button</button>
+  </div>
+<!-- 3-d Button -->
+  <div class="text-center">
+    <h2 class=" text-gray-100 p-4 font-bold text-2xl border-orange-800 border-b-2 inline-block  mb-2 box-shadow-blue">3-D button</h2><br>
+    <button class=" focus:outline-none btn bg-blue-600 border-b-4 border-blue-800">Button</button>
+  </div>
+  <!-- Curve Button -->
+  <div class="text-center">
+    <h2 class="text-gray-100 p-4 font-bold text-2xl border-orange-800 border-b-2 inline-block  mb-2 box-shadow-blue">Curve Button</h2><br>
+    <button class="btn focus:outline-none focus:shadow-outline text-gray-700 rounded-tl-full rounded-br-full">
+      Button
+    </button>
+  </div>
+  <!-- Download Button-->
+  <div class="text-center">
+    <h2 class="text-gray-100 p-4 font-bold text-2xl border-orange-800 border-b-2 inline-block  mb-2 box-shadow-blue">Download Button</h2><br>
+    <button class=" focus:outline-none focus:shadow-outline btn bg-gray-300 hover:bg-gray-400 text-gray-800 inline-flex items-center">
+    <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+    <span>Download</span>
+  </button>
 
-        <!-- Download button from tailwind -->
-        
-        <h2 class="p-4 text-2xl font-bold text-gray-100 bg-gray-900">Download Button</h2>
-        <div class="m-4">
-        <button class="inline-flex items-center px-4 py-2 font-bold text-gray-800 bg-gray-300 rounded hover:bg-gray-400">
-            <svg class="w-4 h-4 mr-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
-            <span>Download</span>
-          </button>
-
-          <button class="inline-flex items-center px-4 py-2 font-bold text-gray-800 bg-gray-300 rounded hover:bg-gray-400">
-            <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 12l11 3.1 7-8.1-8.156 5.672-4.312-1.202 15.362-7.68-3.974 14.57-3.75-3.339-2.17 2.925v-.769l-2-.56v7.383l4.473-6.031 4.527 4.031 6-22z"/></svg>
-            <span>Send</span>
-          </button>
-
-          <button class="inline-flex items-center px-4 py-2 font-bold text-gray-800 bg-gray-300 rounded hover:bg-gray-400">
-            <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M22.587 14.624l-9.584-9.624h-4.928c.106.357.167.701.173 1.025.985.123 1.752.956 1.752 1.975 0 1.104-.896 2-2 2s-2-.896-2-2c0-.843.524-1.561 1.262-1.855.01-.337-.067-.731-.227-1.145h-2.035v8.005l9.623 9.582 7.964-7.963zm-14.489-7.604c-.088.215-.207.408-.362.568-.231.239-.472.394-.719.495.045.511.461.917.983.917.552 0 1-.448 1-1 0-.517-.399-.929-.902-.98zm15.902 7.605l-9.375 9.375-10.625-10.579v-5.914c-1.123-.512-2.394-1.091-4-1.091v-1c1.611 0 2.92.511 4 .994v-2.41h2.492c-1.054-1.53-3.181-3-6.492-3v-1c4.093 0 6.603 2.055 7.661 4h5.757l10.582 10.625zm-6.997 1.731l.521.521-.698.697-.54-.538c-.525.396-1.068.597-1.612.597-.652 0-1.272-.295-1.734-.753l.738-.739c.303.27.631.462 1.049.462.443 0 .896-.228 1.347-.679.361-.359.569-.736.621-1.122.102-.76-.489-1.258-1.078-1.258-.392 0-.875.184-1.475.563-1.225.773-2.402 1.243-3.413.232-.918-.917-.645-2.112-.076-2.938l-.653-.652.698-.699.626.627c.538-.45 1.097-.677 1.663-.677.665 0 1.286.316 1.761.792l-.744.744c-.731-.742-1.624-.545-2.276.106-.322.323-.52.675-.572 1.02-.122.81.6 1.218.961 1.218.338 0 .774-.174 1.456-.584.944-.563 1.593-.804 2.171-.804.513 0 .963.202 1.378.617 1.038 1.038.624 2.351-.119 3.247z"/></svg>
-            <span>Buy Now</span>
-          </button>
-        </div>
-
+ </div>
 </body>
 </html>
