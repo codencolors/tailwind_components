@@ -11,4 +11,7 @@
 .arrow_btn {
     @apply p-2 text-2xl font-semibold text-white bg-transparent cursor-pointer;
 }
+.btn:hover {
+    @apply px-4 duration-200 bg-blue-600;
+}
 @tailwind utilities;

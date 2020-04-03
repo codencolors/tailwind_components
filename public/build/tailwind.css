@@ -656,6 +656,13 @@ video {
   cursor: pointer;
 }
 
+.btn:hover {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition-duration: 200ms;
+  background-color: #3182ce;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
