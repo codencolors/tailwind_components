@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="./build/tailwind.css">
+</head>
+
+<body>
+    <h1 class="text-4xl">Forms</h1>
+    <p class="font-semibold border-2 p-4 border">Click on input bar to see transition</p>
+    <div class="relative p-4 border-4 text-center mt-16" x-data="{ isOpen : false }">
+        <label for="name" class=" ml-2 absolute transition-all duration-300" :class="{ 'text-red-500 -mt-2 ml-4 text-xs bg-white font-bold px-1' : isOpen === true }">Name</label>
+        <input type="text" name="name" class="border-2 shadow p-2 focus:border-red-500" @click="{ isOpen = true }" @click.away="{ isOpen = false }">
+    </div>
+    <script src="../js/alpine.js"></script>
+</body>
+
+</html>
