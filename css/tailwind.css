@@ -3,6 +3,12 @@
 @tailwind components;
 
 .btn {
-    @apply py-4 px-8 bg-gray-200 rounded-lg font-semibold text-indigo-100 outline-none;
+    @apply px-8 py-4 font-semibold tracking-wider text-indigo-100 uppercase bg-gray-200 rounded-lg outline-none;
+}
+.dot_circle {
+    @apply inline-block w-2 h-2 mr-1 bg-gray-600 rounded-md cursor-pointer;
+}
+.arrow_btn {
+    @apply p-2 text-2xl font-semibold text-white bg-transparent cursor-pointer;
 }
 @tailwind utilities;
