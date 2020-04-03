@@ -43,3 +43,9 @@ server code using
 
 live-server public/ ("keep all your file inside public folter");
 
+
+-------------
+Created Buttons with @apply and made a btn class for any type of button
+
+For use simple button use
+class="btn"

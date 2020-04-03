@@ -2,4 +2,7 @@
 
 @tailwind components;
 
+.btn {
+    @apply py-4 px-8 bg-gray-200 rounded-lg font-semibold text-indigo-100 outline-none;
+}
 @tailwind utilities;
