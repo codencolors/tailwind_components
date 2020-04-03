@@ -37,7 +37,7 @@ link the file in you webpage to use it
 
 For live server use npm package "live-server"
 
-install => npm install -g liver-server
+install => npm install -g live-server
 
 server code using
 
