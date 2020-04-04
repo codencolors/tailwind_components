@@ -648,17 +648,26 @@ video {
 }
 
 .arrow_btn {
-  padding: 0.5rem;
+  position: absolute;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   font-size: 1.5rem;
-  font-weight: 600;
-  color: #fff;
-  background-color: transparent;
+  line-height: 2.5rem;
+  text-align: center;
+  color: #4c51bf;
+  background-color: #fff;
+  border-style: none;
+  border-radius: 9999px;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   cursor: pointer;
 }
 
 .btn:hover {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   transition-duration: 200ms;
   background-color: #3182ce;
 }

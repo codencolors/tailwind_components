@@ -6,20 +6,40 @@
     <title>Document</title>
     <link rel="stylesheet" href="../public/build/tailwind.css">
     <style>
-        
+        #prevbtn , #nextbtn {
+            box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 300ms;
+            z-index: 3;
+        }
+        .card {
+            box-shadow: 0 1px 2px rgba(20,23,28,.1), 0 2px 2px rgba(20,23,28,.1);
+        }
+
     </style>
 </head>
 <body>
-    <!-- Card Slider -->
 
-    <div class="inline-block max-w-xs bg-white border border-b-2 border-gray-100 shadow-lg">
-            <img src="../img/card_img_2.jpg" class="w-full">
+      <!-- Slider Box -->
+<div class="relative max-w-screen-lg p-4 m-auto mt-4">
+        <!-- Card -->
+    <div class="inline-block max-w-xs bg-white border border-b-2 rounded-br-lg shadow-lg card rounded-tr-md">
+        <img src="../img/card_img_2.jpg" class="w-full">
         <div class="p-4">
             <h3 class="font-semibold tracking-wider text-gray-800">The Business Integlligence Analyst Course 2020</h3>
             <p class="mt-2 mb-2 tracking-wide text-gray-600">Here you will learn the greatest fact about the bussiness and the ingredients to do the work.</p>
             <span class="block mb-4 font-semibold text-orange-600">Price :- ₹450</span>
-            <a href="#" class="px-2 py-1 bg-blue-700 btn">Buy Now</a>
+            <a href="#" class="px-4 py-1 bg-blue-700 btn">Buy Now</a>
         </div>
     </div>
+
+    <!-- Buttons -->
+        <a id="prevbtn" class="-ml-6 arrow_btn">&#10094;</a>
+        <a id="nextbtn" class="right-0 -mr-6 arrow_btn">&#10095;</a>
+</div>
+  
+
+   
 </body>
 </html>
