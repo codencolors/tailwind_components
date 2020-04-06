@@ -38,3 +38,18 @@ const prevButton = document.querySelector('#prevbtn');
 
 nextButton.addEventListener('click', nextSlide);
 prevButton.addEventListener('click', prevSlide);
+
+
+
+
+// =================//
+// Card Coding =====//
+// ================//
+
+const cardBox = document.querySelector('#card_Box');
+const cardslide = [
+    '../img/card_img_2.jpg',
+    '../img/card_img.1.jpg'
+]
+const img = cardBox.querySelector('img');
+console.log(img);

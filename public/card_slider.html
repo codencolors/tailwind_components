@@ -24,12 +24,14 @@
       <!-- Slider Box -->
 <div class="relative max-w-screen-lg p-4 m-auto mt-4">
         <!-- Card -->
-    <div class="inline-block max-w-xs bg-white border border-b-2 rounded-br-lg shadow-lg card rounded-tr-md">
-        <img src="../img/card_img_2.jpg" class="w-full">
+    <div id="card_Box" class="inline-block max-w-xs bg-white border border-b-2 rounded-br-lg shadow-lg card rounded-tr-md">
+        <img id="cardImg" class="w-full">
         <div class="p-4">
-            <h3 class="font-semibold tracking-wider text-gray-800">The Business Integlligence Analyst Course 2020</h3>
-            <p class="mt-2 mb-2 tracking-wide text-gray-600">Here you will learn the greatest fact about the bussiness and the ingredients to do the work.</p>
-            <span class="block mb-4 font-semibold text-orange-600">Price :- ₹450</span>
+            <h3 id="cardSlideTitle" class="font-semibold tracking-wider text-gray-800"></h3>
+            <p id="cardSlideIntro" class="mt-2 mb-2 tracking-wide text-gray-600"></p>
+            <div>
+                <span class="inline-block mb-4 font-semibold text-orange-600">Price :-</span><span id="cardSlidePrice" class="inline-block mb-4 font-semibold text-orange-600"></span>
+            </div>
             <a href="#" class="px-4 py-1 bg-blue-700 btn">Buy Now</a>
         </div>
     </div>
@@ -38,8 +40,24 @@
         <a id="prevbtn" class="-ml-6 arrow_btn">&#10094;</a>
         <a id="nextbtn" class="right-0 -mr-6 arrow_btn">&#10095;</a>
 </div>
-  
-
-   
+   <script>
+       const card_Box = document.querySelectorAll('#card_Box');
+       const cardSlideImg = [
+           '../img/card_img_1.jpg',
+       ]
+       const cardSlideTitle = [
+           'The Business Integlligence Analyst Course 2020',
+       ]
+       const cardSlideIntro = [
+           'Here you will learn the greatest fact about the bussiness and the ingredients to do the work.',
+       ]
+       const cardSlidePrice = [
+           '₹650',
+       ]
+       document.querySelector('#cardImg').setAttribute('src', cardSlideImg[0]);
+       document.querySelector('#cardSlideTitle').innerHTML = cardSlideTitle[0];
+       document.querySelector('#cardSlideIntro').innerHTML = cardSlideIntro[0];
+       document.querySelector('#cardSlidePrice').innerHTML = cardSlidePrice[0]; 
+    </script>
 </body>
 </html>

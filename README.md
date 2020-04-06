@@ -63,3 +63,5 @@ components can be usuable with class arrow_btn;
 
 <!-- Card Created-->
 Can be usuable in any variance
+
+<!-- Card Slider Created -->
