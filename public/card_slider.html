@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/build/tailwind.css" />
+    <style>
+        #prevbtn,
+        #nextbtn {
+            box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
+                0 3px 1px 0 rgba(20, 23, 28, 0.1);
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 300ms;
+            z-index: 3;
+        }
+
+        .card {
+            box-shadow: 0 1px 2px rgba(20, 23, 28, 0.1),
+                0 2px 2px rgba(20, 23, 28, 0.1);
+                min-width: 200px;
+        }
+        #cardSlideIntro, #cardSlideTitle {
+            text-overflow: ellipsis; 
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .cards {
+            display: flex;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Slider Box -->
+    <div class="relative max-w-screen-lg p-4 m-auto mt-4">
+        <!-- Card -->
+        
+
+        <div class="cards"></div>
+
+        <!-- Buttons -->
+        <a id="prevbtn" class="-ml-6 arrow_btn">&#10094;</a>
+        <a id="nextbtn" class="right-0 -mr-6 arrow_btn">&#10095;</a>
+    </div>
+    <script>
+        const data = {
+            currentIndex: 0,
+            cards: [
+                {
+                    title: "The Business Integlligence Analyst Course 2020",
+                    price: "₹650",
+                    intro:
+                        "Here you will learn the greatest fact about the bussiness and the ingredients to do the work.",
+                    image: "../img/card_img_1.jpg",
+                },
+                {
+                    title: "The World Without Fear",
+                    price: "₹550",
+                    intro: "A Resolve lesson of the baby",
+                    image: "../img/card_img_2.jpg",
+                },
+                {
+                    title: "The World Without Fear",
+                    price: "₹550",
+                    intro: "A Resolve lesson of the baby",
+                    image: "../img/card_img_2.jpg",
+                },{
+                    title: "The World Without Fear",
+                    price: "₹550",
+                    intro: "A Resolve lesson of the baby",
+                    image: "../img/card_img_2.jpg",
+                },{
+                    title: "The World Without Fear",
+                    price: "₹550",
+                    intro: "A Resolve lesson of the baby",
+                    image: "../img/card_img_2.jpg",
+                },{
+                    title: "The World Without Fear",
+                    price: "₹550",
+                    intro: "A Resolve lesson of the baby",
+                    image: "../img/card_img_2.jpg",
+                },{
+                    title: "The World Without Fear",
+                    price: "₹550",
+                    intro: "A Resolve lesson of the baby",
+                    image: "../img/card_img_2.jpg",
+                }
+            ],
+        };
+
+        data.cards.forEach(element => {
+            const cardHTML = `
+            <div id="card_Box" class="inline-block max-w-xs m-4 bg-white border border-b-2 rounded-br-lg shadow-lg card rounded-tr-md">
+                <img id="cardImg" src="${element.image}" class="w-full">
+                <div class="p-4">
+                    <h3 id="cardSlideTitle" class="font-semibold tracking-wider text-gray-800">${element.title}</h3>
+                    <p id="cardSlideIntro" class="mt-2 mb-2 tracking-wide text-gray-600">${element.intro}</p>
+                    <div>
+                        <span class="inline-block mb-4 font-semibold text-orange-600">Price :-</span><span id="cardSlidePrice" class="inline-block mb-4 font-semibold text-orange-600">${element.price}</span>
+                    </div>
+                    <a href="#" class="px-4 py-1 bg-blue-700 btn">Buy Now</a>
+                </div>
+            </div>
+            `;
+            document.querySelector('.cards').innerHTML += cardHTML;
+        });
+
+        const next = document.querySelector('#nextbtn');
+        next.onclick = () => {
+            const cards = document.querySelector('.cards')
+            cards.style;
+        };
+        </script>
+</body>
+
+</html>

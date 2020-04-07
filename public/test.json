@@ -1,0 +1,11 @@
+{
+    "userDetails": {
+        "name": "Vikas Kukreti hutiya",
+        "age": 22
+    },
+    "userExtraDetails": {
+        "friendName": "Sourabh Tittar",
+        "loves": "sleep",
+        "hates": "musu"
+    }
+}
