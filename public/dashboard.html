@@ -272,10 +272,10 @@
 
         <div x-show="openBar" class="w-auto h-screen p-5 left-0 fixed border-2 overflow-x-hidden"
             :class="{ 'hidden p-0 w-0' : openBar === false }" :class="{ 'block w-auto' : openBar === true }"
-            x-transition:enter="transition transform ease-in duration-100 lg:duration-300 origin-left"
-            x-transition:enter-start="w-0 scale-x-0" x-transition:enter-end="w-auto scale-x-100"
-            x-transition:leave="transition transform ease-in duration-100 lg:duration-300 origin-left"
-            x-transition:leave-start="w-auto scale-x-100" x-transition:leave-end="w-0 scale-x-0"
+            x-transition:enter="transition transform ease-in-out duration-100 lg:duration-700"
+            x-transition:enter-start="-translate-x-full" x-transition:enter-end=" translate-x-0"
+            x-transition:leave="transition transform ease-in-out duration-100 lg:duration-700"
+            x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full"
             style="background-color: #f4f5f7;">
 
             <div class="flex flex-col w-auto mt-16">
@@ -517,7 +517,7 @@
 
         <div id="mainContent" class="h-screen right-0 absolute pt-10 lg:pl-16 pl-10 mt-16"
             :class="{ 'w-full' : openBar === false,
-                        'w-screen md:w-10/12 transition-all transform ease-out duration-500 origin-right' : openBar === true }" style="z-index: -1;">
+                        'w-screen md:w-10/12 transition-all transform ease-out duration-1000 origin-right' : openBar === true }" style="z-index: -1;">
             <header class="bg-white shadow">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     <h1 class="text-3xl font-bold leading-tight text-gray-900">
