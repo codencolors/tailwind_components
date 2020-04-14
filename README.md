@@ -53,16 +53,25 @@ class="btn"
 
 -----------
 <!-- Slider js -->
-Dot_cicle created in css/tailwind.js
+```Dot_cicle created in css/tailwind.js
 Can be usuable for other slider's
 
-
----------Created < left arrow and right arrow >
+Created < left arrow and right arrow >
 components can be usuable with 
+
 class "arrow_btn";
+```
 
+```
+Topbar with responsive dropdown along with navigation button
+```
+```html 
+<li class="relative px-6 py-3 tracking-wider dropdown-btn">Dropdown<span></span>
+                    <ul class="absolute left-0 w-40 text-base bg-gray-100 dropdown-cont">
+                        <li class="px-4 py-2">Link 1</li>
+                        <li class="px-4 py-2">Link 2</li>
+                        <li class="px-4 py-2">Link 3</li>
+                    </ul>
+                </li>
+```
 
-<!-- Card Created-->
-Can be usuable in any variance
-
-<!-- Card Slider Created -->

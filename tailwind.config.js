@@ -1,9 +1,12 @@
 module.exports = {
   theme: {
     extend: {
-      colors: {
-        
-      }
+      backgroundColor: {
+        'white-base': ' #fbfcfc'
+      },
+      textColor: {
+        'orange-base': '#f76707'
+      },
     },
   },
   variants: {
