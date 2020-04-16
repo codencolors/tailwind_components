@@ -1,0 +1,97 @@
+body {
+    background-color:  #2e86c1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wtr_card_box {
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: seashell;
+    border-radius: 0.4rem;
+    padding: 1rem;
+}
+.wtr_card_box:hover {
+    background-color: orangered;
+}
+.wtr_day, .wtr_datm, .wtr_desc, .wtr_more {
+    display: flex;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #eee;
+}
+/* Weather date and time */
+.wtr_day #day {
+    flex: 2;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.wtr_day #refresh {
+    cursor: pointer;
+}
+.wtr_datm #date {
+    flex: 2;
+}
+/* Weather degree and image */
+.wtr_desc {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.wtr_info {
+    flex: 2;
+}
+.wtr_info #area {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.wtr_info #deg {
+    font-weight: bolder;
+    font-size: 4rem;
+}
+.wtr_img {
+    flex: 1;
+}
+.wtr_img img{
+    width: 100%;
+    object-fit: cover;
+}
+/* More info */
+.wtr_more .deg, .per, .time {
+    flex: 1;
+    font-size: 0.8rem;
+}
+.wtr_more .per {
+    text-align: right;
+}
+/* more info info */
+.wtr_more_info {
+    padding-top: 1rem;
+}
+.wtr_more_info svg {
+    vertical-align: middle;
+}
+.wtr_more_info span {
+    font-size: 0.8rem;
+}
+
+/* Below day */
+.single_box {
+    margin-top: 0.3rem;
+}
+.for_box {
+    display: flex;
+}
+.for_box .day {
+    flex: 2;
+    font-weight: bolder;
+    font-size: 1.4rem;
+
+    text-transform: uppercase;
+}
+.for_box svg {
+    flex: 2;
+}
+.for_box .deg {
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
