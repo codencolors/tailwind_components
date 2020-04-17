@@ -1,0 +1,44 @@
+{
+    "coord": {
+        "lon": 78.04,
+        "lat": 30.33
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 304.71,
+        "feels_like": 302,
+        "temp_min": 304.71,
+        "temp_max": 304.71,
+        "sunrise": "7:20 AM",
+        "sunset": "7:30 PM",
+        "pressure": 1010,
+        "humidity": 18,
+        "sea_level": 1010,
+        "grnd_level": 937
+    },
+    "wind": {
+        "speed": 2.08,
+        "deg": 40
+    },
+    "clouds": {
+        "all": 75
+    },
+    "dt": 1587116449,
+    "sys": {
+        "country": "IN",
+        "sunrise": 1587082690,
+        "sunset": 1587129369
+    },
+    "timezone": 19800,
+    "id": 1273313,
+    "name": "Dehradun",
+    "cod": 200
+}

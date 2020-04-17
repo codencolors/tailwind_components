@@ -8,9 +8,7 @@ body {
     color: seashell;
     border-radius: 0.4rem;
     padding: 1rem;
-}
-.wtr_card_box:hover {
-    background-color: orangered;
+    transition: 0.4s 0.1s all ease-out; /* * timing delay property timing-fuction */
 }
 .wtr_day, .wtr_datm, .wtr_desc, .wtr_more {
     display: flex;
@@ -19,7 +17,7 @@ body {
     border-bottom: 1px solid #eee;
 }
 /* Weather date and time */
-.wtr_day #day {
+.wtr_day .day {
     flex: 2;
     text-transform: uppercase;
     font-weight: bold;
@@ -28,7 +26,7 @@ body {
 .wtr_day #refresh {
     cursor: pointer;
 }
-.wtr_datm #date {
+.wtr_datm #today {
     flex: 2;
 }
 /* Weather degree and image */
@@ -44,6 +42,10 @@ body {
     text-transform: uppercase;
 }
 .wtr_info #deg {
+    font-weight: bolder;
+    font-size: 4rem;
+}
+.wtr_info .deg {
     font-weight: bolder;
     font-size: 4rem;
 }
@@ -84,7 +86,6 @@ body {
     flex: 2;
     font-weight: bolder;
     font-size: 1.4rem;
-
     text-transform: uppercase;
 }
 .for_box svg {
@@ -94,4 +95,58 @@ body {
     font-weight: bold;
     font-size: 1.4rem;
     text-transform: uppercase;
+}
+/* toggle btn */
+.toggle_input {
+    display: none;
+}
+.togglebtn {
+    position: relative;
+    width: 50px;
+    display: inline-block;
+    height: 26px;
+    background:rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    margin-right: 1rem;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+.togglebtn::before {
+    position: absolute;
+    width: 18px;
+    margin-top: 2px;
+    margin-left: 4px;
+    height: 18px;
+    background: #eee;
+    content: "";
+    padding: 2px;
+    display: inline-block;
+    border-radius: 20px;
+    transition: 0.3s all;
+}
+.toggle_input:checked + .togglebtn {
+    
+    background: #eee;
+}
+.toggle_input:checked + .togglebtn::before {
+    
+    background: orangered;
+    right: 4px;
+}
+
+.light {
+    background: orangered
+}
+
+#refresh.active svg{
+    animation: 1s rotate-box infinite;
+}
+
+@keyframes rotate-box{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

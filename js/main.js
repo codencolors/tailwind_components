@@ -37,5 +37,5 @@ nextButton.addEventListener("click", nextSlide);
 prevButton.addEventListener("click", prevSlide);
 
 // =================//
-// Card Coding =====//
+// Weather Card Coding =====//
 // ================//

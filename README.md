@@ -54,11 +54,10 @@ class="btn"
 -----------
 <!-- Slider js -->
 ```Dot_cicle created in css/tailwind.js
-Can be usuable for other slider's
+Can be usuable for other slider'sg
 
 Created < left arrow and right arrow >
 components can be usuable with 
-
 class "arrow_btn";
 ```
 
