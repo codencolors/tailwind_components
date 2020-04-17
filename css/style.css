@@ -142,7 +142,7 @@ body {
     animation: 1s rotate-box infinite;
 }
 
-@keyframes rotate-box{
+@keyframes rotate-box {
     0% {
         transform: rotate(0deg);
     }

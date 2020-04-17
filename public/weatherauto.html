@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather UI with API</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
@@ -35,7 +35,7 @@
                 <span id="sky">Partly CLoudy</span>
             </div>
             <div class="wtr_img">
-                <img id="wtr_icon" src="img/baseline_cloud_white_48dp.png" alt="">
+                <img id="wtr_icon" src="../img/baseline_cloud_white_48dp.png" alt="">
             </div>
         </div>
 
@@ -133,8 +133,8 @@
     const wtrCardBox = document.querySelector('.wtr_card_box');
     const refresh = document.querySelector('#refresh');
     const img = {
-        'clouds': 'img/baseline_cloud_white_48dp.png',
-        'rainy' : 'img/iconmonstr-umbrella-10-240.png'
+        'clouds': '../img/baseline_cloud_white_48dp.png',
+        'rainy' : '../img/iconmonstr-umbrella-10-240.png'
     }
     const daysName = [
         'Sunday',
@@ -188,18 +188,20 @@
         sunset.innerHTML = wd.main.sunset;
         pressure.innerHTML = wd.main.pressure + ' ';
         wind.innerHTML = wd.wind.speed + 'mile/sec';
+
+        
+        refresh.classList.remove('active');
     }
     // 
     function fetchWeatherApi() {
         // const url1 = `https://api.openweathermap.org/data/2.5/weather?q=Dehradun&appid=cdcb16b3f2d1c680ba5b0739d2b4f85b`;
-        const url2 = `js/weather.json`;
+        const url2 = `../js/weather.json`;
         fetch(url2)
-            .then((Response) => {
+            .then((Response) => { 
                 return Response.json();
             })
             .then((data) => {
                 weatherDetails(data);
-                refresh.classList.remove('active');
             });
     }
     fetchWeatherApi();
@@ -221,7 +223,6 @@
     }
     refresh.addEventListener('click', ()=> {
         refresh.classList.add('active');
-        fetchWeatherApi();
     })
         // 1273313
 </script>
