@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../public/build/tailwind.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #2193b0, #6dd5ed);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        div {
+            width: 400px;
+        }
+
+        button {
+            background: linear-gradient(to right, #2193b0, #6dd5ed);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pt-8 m-auto mt-20 bg-white">
+        <h2 class="text-2xl font-bold text-center">Login</h2>
+        <form class="p-12">
+            <label class="block mt-2">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span class="text-sm text-gray-600">Username</span><br>
+                <input class="w-full px-4 py-2 placeholder-gray-600 border-b border-gray-500" type="text" placeholder="Enter your Username">
+            </label>
+            <label class="block mt-4">
+                <i class="fa fa-key" aria-hidden="true"></i>
+                <span class="text-sm text-gray-600">Password</span><br>
+                <input class="w-full px-4 py-2 placeholder-gray-600 border-b border-gray-500" type="password"
+                    placeholder="Enter your Password">
+            </label>
+            <span class="block mt-2 text-sm text-right text-gray-600 underline">
+                <a href="#">Forgot Password?</a>
+            </span>
+            <button class="w-full p-1 mt-4 font-semibold text-gray-200 uppercase">Login</button>
+
+            <span class="block mt-2 cursor-pointer text-sm text-center text-gray-700 underline ><a href="#">I havn't created an Account!</a></span>
+            <span class="block mt-4 text-sm text-center text-gray-700">Or Sign Up Using</span>
+            <label class="flex justify-center mt-4">
+                <img class="mr-2" src="../img/facebook.png">
+                <img class="mr-2" src="../img/brands-and-logotypes.png" alt="">
+                <img class="mr-2" src="../img/instagram-sketched.png" alt="">
+                <!-- icon -->
+            </label>
+        </form>
+    </div>
+</body>
+
+</html>
