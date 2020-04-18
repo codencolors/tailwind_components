@@ -13,5 +13,14 @@
 }
 .btn:hover {
     @apply px-6 duration-200 bg-blue-600;
+/* }
+.form_input {
+    @apply block py-2 m-auto mt-2 mb-4 text-gray-400 placeholder-gray-600 bg-transparent border-b border-gray-600;
 }
+.form_input:focus {
+    @apply border-green-600;
+}
+.form_input:active {
+    @apply border-green-700
+} */
 @tailwind utilities;

@@ -139,7 +139,7 @@ body {
 }
 
 #refresh.active svg{
-    animation: 1s rotate-box infinite;
+    animation: 0.6s rotate-box linear infinite;
 }
 
 @keyframes rotate-box {

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="build/tailwind.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #2E3740;
+        }
+
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        /* ! carram 🤷‍♂️😒*/
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="form" class="max-w-md p-4 m-auto mt-8 text-center">
+            <h2 class="text-2xl font-bold tracking-wider text-center text-green-500">Sign Up</h2>
+
+            <form class="mt-8">
+
+                <span id="error_box" class="block w-3/4 px-4 m-auto mb-2 font-semibold text-left text-indigo-200 bg-red-700">
+                    <!--are--></span>
+                <span class="block pl-12 text-left text-green-600">Please Kindly Fill all the Details !</span>
+                <input id="input-first-name"
+                    class="block w-3/4 py-2 m-auto mt-2 mb-4 text-gray-400 placeholder-gray-600 bg-transparent border-b border-gray-600 focus:border-green-600"
+                    type="text" placeholder="First Name">
+                <input id="input-username"
+                    class="block w-3/4 py-2 m-auto mb-4 text-gray-100 placeholder-gray-600 bg-transparent border-b border-gray-600 focus:border-green-600"
+                    type="text" placeholder="Username">
+                <input id="input-email"
+                    class="block w-3/4 py-2 m-auto mb-4 text-gray-100 placeholder-gray-600 bg-transparent border-b border-gray-600 focus:border-green-600"
+                    type="email" placeholder="Email Address">
+                <input id="input-mobile"
+                    class="block w-3/4 py-2 m-auto mb-4 text-gray-100 placeholder-gray-600 bg-transparent border-b border-gray-600 focus:border-green-600 "
+                    type="number" placeholder="Mobile No.">
+                <input id="input-password"
+                    class="block w-3/4 py-2 m-auto mb-4 text-gray-100 placeholder-gray-600 bg-transparent border-b border-gray-600 focus:border-green-600"
+                    type="password" placeholder="Password">
+                <input id="input-confirm-password"
+                    class="block w-3/4 py-2 m-auto mb-4 text-gray-100 placeholder-gray-600 bg-transparent border-b border-gray-600 focus:border-green-600"
+                    type="password" placeholder="Confirm Password">
+                <button id="submit-button"
+                    class="w-3/4 p-2 mt-4 mb-2 tracking-wide text-center text-white bg-green-600">Register</button>
+                <span class="block text-left"><a
+                        class="inline-block ml-12 text-sm text-gray-600 underline hover:text-indigo-600"
+                        href="#">Already Have an Account?</a></span>
+
+        </div>
+    </div>
+</body>
+<script src="../js/form.js"></script>
+
+</html>
+<!-- sure -->

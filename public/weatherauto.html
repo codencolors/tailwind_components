@@ -188,14 +188,11 @@
         sunset.innerHTML = wd.main.sunset;
         pressure.innerHTML = wd.main.pressure + ' ';
         wind.innerHTML = wd.wind.speed + 'mile/sec';
-
-        
         refresh.classList.remove('active');
     }
-    // 
     function fetchWeatherApi() {
         // const url1 = `https://api.openweathermap.org/data/2.5/weather?q=Dehradun&appid=cdcb16b3f2d1c680ba5b0739d2b4f85b`;
-        const url2 = `../js/weather.json`;
+        const url2 = `../js/script.json`;
         fetch(url2)
             .then((Response) => { 
                 return Response.json();
@@ -223,8 +220,8 @@
     }
     refresh.addEventListener('click', ()=> {
         refresh.classList.add('active');
-    })
-        // 1273313
+        fetchWeatherApi();
+    });
 </script>
 
 </html>
